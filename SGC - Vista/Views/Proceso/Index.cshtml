@@ -1,0 +1,56 @@
+﻿@model IEnumerable<SGC___Modelo.Proceso>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EstadoGestion.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaInicio)
+        </th>
+        <th>
+            Fecha Fin
+            @*@Html.DisplayNameFor(model => model.fechaFin)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.anulado)
+        </th>
+        <th>Documentos</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoGestion.estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaFin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.anulado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem=> item.Documentos)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idProceso }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idProceso }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idProceso })
+        </td>
+    </tr>
+}
+
+</table>

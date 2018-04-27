@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{42AA1D8A-F3E6-49A3-8D11-67D43C2D21BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SGC___Modelo</RootNamespace>
+    <AssemblyName>SGC - Modelo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actividades.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="AreaLaboratorio.cs" />
+    <Compile Include="Cargo.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteRadiacion.cs" />
+    <Compile Include="Consanguiniedad.cs" />
+    <Compile Include="DetalleFG13.cs" />
+    <Compile Include="Equipo.cs" />
+    <Compile Include="EquiposEntrega.cs" />
+    <Compile Include="EstadoGestion.cs" />
+    <Compile Include="EstadoSolicitud.cs" />
+    <Compile Include="EvaluacionCertificados.cs" />
+    <Compile Include="Evaluadores.cs" />
+    <Compile Include="fabricanteEquipo.cs" />
+    <Compile Include="FG01_CCompromiso.cs" />
+    <Compile Include="FG02_CConfidencialidad.cs" />
+    <Compile Include="FG03_ConflictoInteres.cs" />
+    <Compile Include="FG04_ConflictoInteres.cs" />
+    <Compile Include="FG05_MatrizDeRiesgos.cs" />
+    <Compile Include="FG06Detalle.cs" />
+    <Compile Include="FG06_TratamientoRiesgos.cs" />
+    <Compile Include="FG08Detalle.cs" />
+    <Compile Include="FG08_SolicitudCME.cs" />
+    <Compile Include="FG09HistoricoCambios.cs" />
+    <Compile Include="FG09_ControlCambios.cs" />
+    <Compile Include="FG10Estados.cs" />
+    <Compile Include="FG10Portadores.cs" />
+    <Compile Include="FG10Radiaciones.cs" />
+    <Compile Include="FG10_SolicitudDosExterna.cs" />
+    <Compile Include="FG11_AcuerdoServicio.cs" />
+    <Compile Include="FG12_EntregaEquipos.cs" />
+    <Compile Include="FG13_ProformaServicio.cs" />
+    <Compile Include="FG14Servicios.cs" />
+    <Compile Include="FG14_CalibracionDosimetrica.cs" />
+    <Compile Include="FG15ControlServicioCalidad.cs" />
+    <Compile Include="FG15_Especificaciones.cs" />
+    <Compile Include="FG16_Contrato.cs" />
+    <Compile Include="FG17_ContratoPorIncorporacion.cs" />
+    <Compile Include="FG18_ListaProveedores.cs" />
+    <Compile Include="FG19_Detalle.cs" />
+    <Compile Include="FG19_SeguimientoControl.cs" />
+    <Compile Include="FG20_ReclamoProveedor.cs" />
+    <Compile Include="FG21_EvaluacionInicial.cs" />
+    <Compile Include="FG21_Evaluadores.cs" />
+    <Compile Include="FG22_EvaluacionPeri.cs" />
+    <Compile Include="FG22_Evaluadores.cs" />
+    <Compile Include="FG23_SatisfaccionCliente.cs" />
+    <Compile Include="FG24_ControlQuejasApelaciones.cs" />
+    <Compile Include="FG25_AtencionReclamos.cs" />
+    <Compile Include="FG25_Detalle.cs" />
+    <Compile Include="FG26_Acciones.cs" />
+    <Compile Include="FG26_AtencionReclamos.cs" />
+    <Compile Include="FG27_CategoriaHallazgo.cs" />
+    <Compile Include="FG27_TiposImplementacion.cs" />
+    <Compile Include="FG27_TrabajosNoConformes.cs" />
+    <Compile Include="FG28_ImplementacionAcc.cs" />
+    <Compile Include="FG28_PlanAccion.cs" />
+    <Compile Include="FG28_RevisionSeguimiento.cs" />
+    <Compile Include="FG29TiposRegistro.cs" />
+    <Compile Include="FG29_VerificacionControl.cs" />
+    <Compile Include="FG30CriteriosAuditoria.cs" />
+    <Compile Include="FG30DetalleAuditoria.cs" />
+    <Compile Include="FG30_ProgramaAuditoria.cs" />
+    <Compile Include="FG31_CalificacionAuditores.cs" />
+    <Compile Include="FG31_Criterio.cs" />
+    <Compile Include="FG31_Evaluacion.cs" />
+    <Compile Include="FG31_Requisitos.cs" />
+    <Compile Include="FG32_Lista.cs" />
+    <Compile Include="FG32_ListaVerificacion.cs" />
+    <Compile Include="FG33Detalle.cs" />
+    <Compile Include="FG33_PlanAuditoriaInterna.cs" />
+    <Compile Include="FG34Participantes.cs" />
+    <Compile Include="FG34_ReunionInicialAuditoriaInterna.cs" />
+    <Compile Include="FG35_hallazgos.cs" />
+    <Compile Include="FG35_LevantamientoDeEvidencia.cs" />
+    <Compile Include="FG36Participantes.cs" />
+    <Compile Include="FG36_ReunionCierreAuditoriaInterna.cs" />
+    <Compile Include="FG37Participantes.cs" />
+    <Compile Include="FG37_InformeAuditoriaInterna.cs" />
+    <Compile Include="FG38_CumplimientoDeObjetivos.cs" />
+    <Compile Include="FG38_Detalle.cs" />
+    <Compile Include="FG38_Involucrados.cs" />
+    <Compile Include="FG39_AccionesCorrectivasYPreventivas.cs" />
+    <Compile Include="FG39_Detalle.cs" />
+    <Compile Include="FG40_CambiosQuePuedanAfectarAllSGC.cs" />
+    <Compile Include="FG40_Detalle.cs" />
+    <Compile Include="FG41_Detalle.cs" />
+    <Compile Include="FG41_RecomendacionesDeMejora.cs" />
+    <Compile Include="FG42Detalle.cs" />
+    <Compile Include="FG42_AccionesDeSeguimientoDeLaRevisionPorLaDireccionPrevia.cs" />
+    <Compile Include="FG42_Estados.cs" />
+    <Compile Include="FG43_Detalle.cs" />
+    <Compile Include="FG43_EstadoDeEnsayosYCalibracionesNoConformes.cs" />
+    <Compile Include="FG44_Detalles.cs" />
+    <Compile Include="FG44_Participantes.cs" />
+    <Compile Include="FG44_PlanDeMejoraDerivadoDeLaRevisionPorLaDireccion.cs" />
+    <Compile Include="FG45_Participantes.cs" />
+    <Compile Include="FG45_RevisionPorLaDireccion.cs" />
+    <Compile Include="FormatoGestion.cs" />
+    <Compile Include="FormatoPlantilla.cs" />
+    <Compile Include="Gestion.cs" />
+    <Compile Include="Involucrado.cs" />
+    <Compile Include="Involucrados.cs" />
+    <Compile Include="Laboratorio.cs" />
+    <Compile Include="MarcaInstrumento.cs" />
+    <Compile Include="Modelo.cs" />
+    <Compile Include="ModeloEquipo.cs" />
+    <Compile Include="MotivacionInteres.cs" />
+    <Compile Include="Opcion.cs" />
+    <Compile Include="Persona.cs" />
+    <Compile Include="PersonaLaboratorio.cs" />
+    <Compile Include="Pregunta.cs" />
+    <Compile Include="PrestacionServicio.cs" />
+    <Compile Include="Proceso.cs" />
+    <Compile Include="ProcesoGestion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedores.cs" />
+    <Compile Include="ProveedoresCalificados.cs" />
+    <Compile Include="Puntualidad.cs" />
+    <Compile Include="Representante.cs" />
+    <Compile Include="Riesgos.cs" />
+    <Compile Include="Satisfactorio.cs" />
+    <Compile Include="Seleccion.cs" />
+    <Compile Include="Servicio.cs" />
+    <Compile Include="TipoCliente.cs" />
+    <Compile Include="TipoEquipo.cs" />
+    <Compile Include="TipoRadiacion.cs" />
+    <Compile Include="TiposConflicto.cs" />
+    <Compile Include="TipoServicio.cs" />
+    <Compile Include="TipoSolicitud.cs" />
+    <Compile Include="TipoVisita.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

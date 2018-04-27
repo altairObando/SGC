@@ -1,0 +1,88 @@
+﻿@model SGC___Modelo.FormatoPlantilla
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FormatoPlantilla</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FormatoGestion.codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormatoGestion.codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cuerpoDocumento)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.cuerpoDocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.version)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.version)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.obsoleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.obsoleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.solicitudCambio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.solicitudCambio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

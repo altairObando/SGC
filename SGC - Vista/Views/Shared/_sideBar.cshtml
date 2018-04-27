@@ -1,0 +1,90 @@
+﻿<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- En esta seccion debera de ir el logo de LAFRAM -->
+    <a href="@Url.Action("Index", "Home")" class="brand-link">
+        <img src="~/Content/logo.png" alt="LAFRAM LOGO" class="brand-image img-circle elevation-3"/>
+        <span class="brand-text font-weight-light">LAFRAM</span>
+    </a>
+    <!-- Acá va la barra lateral -->
+    <div class="sidebar">
+        <!-- Ponemos la informacion del Usuario -->
+        @Html.Partial("_LoginPartial")
+        <!-- Aqui van los elementos del menu principal -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Pueden agregar iconos de FontAwsome usando la clase .nav-icon -->
+                <li class="nav-item">
+                    <a href="@Url.Action("Index", "Proceso")" class="nav-link active">
+                        <i class="nav-icon fa fa-fa"></i>
+                        <p>
+                            Procesos SGC
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview ">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-barcode"></i>
+                        <p>
+                            Codigos de Gestion
+                            <i class="right fa fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index","PG")" class="nav-link">
+                                <i class="fa fa-circle-o nav-icon"></i>
+                                <p>Procesos</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index","FG")" class="nav-link">
+                                <i class="fa fa-circle-o nav-icon"></i>
+                                <p>Formatos</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "EstadoGestion")" class="nav-link">
+                                <i class="fa fa-circle-o nav-icon"></i>
+                                <p>Estados</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Index", "Personal")" class="nav-link">
+                        <i class="nav-icon fa fa-group"></i>
+                        <p>Personal</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Index", "Laboratorios")" class="nav-link">
+                        <i class="nav-icon fa fa-assistive-listening-systems"></i>
+                        <p>Laboratorios</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Index", "Cargos")" class="nav-link">
+                        <i class="nav-icon fa fa-address-card-o"></i>
+                        <p>Roles de Usuario</p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-tablet"></i>
+                        <p>
+                            Formatos de Gestión
+                            <i class="right fa fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "FG01")" class="nav-link">
+                                <i class="fa fa-file-text nav-icon "></i>
+                                <p>Carta de Compromiso</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>

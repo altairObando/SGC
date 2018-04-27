@@ -1,0 +1,82 @@
+﻿@model SGC___Modelo.FormatoPlantilla
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FormatoPlantilla</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FormatoGestion.codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormatoGestion.codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+        <dt>
+            <br /><br />
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.cuerpoDocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.version)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.version)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.obsoleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.obsoleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.solicitudCambio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.solicitudCambio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idFormato }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

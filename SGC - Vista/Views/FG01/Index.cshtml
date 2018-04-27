@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SGC___Modelo.FG01_CCompromiso>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Gestion.idGestion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Persona.nombres)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gestion.idGestion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Persona.nombres)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idFG01 }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idFG01 }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idFG01 })
+        </td>
+    </tr>
+}
+
+</table>
