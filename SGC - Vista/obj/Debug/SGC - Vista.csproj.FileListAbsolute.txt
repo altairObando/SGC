@@ -116,3 +116,121 @@ C:\Users\altair\Documents\Proyectos\SGC - LAFRAM\SGC - Vista\bin\es\Microsoft.As
 C:\Users\altair\Documents\Proyectos\SGC - LAFRAM\SGC - Vista\obj\Debug\SGC - Vista.csprojResolveAssemblyReference.cache
 C:\Users\altair\Documents\Proyectos\SGC - LAFRAM\SGC - Vista\obj\Debug\SGC - Vista.dll
 C:\Users\altair\Documents\Proyectos\SGC - LAFRAM\SGC - Vista\obj\Debug\SGC - Vista.pdb
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\SGC - Vista.dll.config
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\SGC - Vista.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\SGC - Vista.pdb
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\csc.exe
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\csc.exe.config
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\csc.rsp
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\csi.exe
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\csi.exe.config
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\csi.rsp
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.AppContext.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Console.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.IO.Compression.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.IO.Pipes.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Security.Claims.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Threading.Thread.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.ValueTuple.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Xml.XPath.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\vbc.exe
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\vbc.exe.config
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\vbc.rsp
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\VBCSCompiler.exe
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Antlr3.Runtime.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\EntityFramework.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\EntityFramework.SqlServer.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Newtonsoft.Json.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Owin.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\SGC - Modelo.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.Helpers.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.Mvc.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.Optimization.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.Razor.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.WebPages.Deployment.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.WebPages.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.WebPages.Razor.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\WebGrease.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\SGC - Modelo.pdb
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Antlr3.Runtime.pdb
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\EntityFramework.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\EntityFramework.SqlServer.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Newtonsoft.Json.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.Helpers.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.Mvc.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.Razor.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.WebPages.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.WebPages.Deployment.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.WebPages.Razor.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\System.Web.Optimization.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\es\System.Web.Helpers.resources.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\es\System.Web.Mvc.resources.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\es\System.Web.Razor.resources.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\es\System.Web.WebPages.resources.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\es\System.Web.Optimization.resources.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\obj\Debug\SGC - Vista.csprojResolveAssemblyReference.cache
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\obj\Debug\SGC - Vista.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Vista\obj\Debug\SGC - Vista.pdb
