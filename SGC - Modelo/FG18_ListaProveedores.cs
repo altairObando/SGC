@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG18_ListaProveedores()
         {
-            ProveedoresCalificados = new HashSet<ProveedoresCalificados>();
+            ProveedoresCalificados = new List<ProveedoresCalificados>();
         }
 
         [Key]
@@ -20,7 +20,7 @@ namespace SGC___Modelo
         public int idGestion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProveedoresCalificados> ProveedoresCalificados { get; set; }
+        public virtual List<ProveedoresCalificados> ProveedoresCalificados { get; set; }
 
         public virtual Gestion Gestion { get; set; }
     }

@@ -27,7 +27,7 @@ namespace SGC___Vista.Controllers
             int EnProceso = estados.Where(x => x.EstadoGestion.estado == "En Proceso").Count();
             int EnCalibracion = estados.Where(x => x.EstadoGestion.estado == "En Calibración").Count();
             int Entrega = estados.Where(x => x.EstadoGestion.estado == "Entrega de Equipos").Count();
-            int Revision = estados.Where(x => x.EstadoGestion.estado == "En Revision ").Count();
+            int Revision = estados.Where(x => x.EstadoGestion.estado == "En Revision").Count();
 
             return Json(new {proceso = EnProceso, calibracion = EnCalibracion,
                              entrega = Entrega, revision = Revision}, JsonRequestBehavior.AllowGet);

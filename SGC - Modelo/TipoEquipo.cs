@@ -12,7 +12,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TipoEquipo()
         {
-            Equipo = new HashSet<Equipo>();
+            Equipo = new List<Equipo>();
         }
 
         [Key]
@@ -26,6 +26,6 @@ namespace SGC___Modelo
         public bool activo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Equipo> Equipo { get; set; }
+        public virtual List<Equipo> Equipo { get; set; }
     }
 }

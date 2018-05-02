@@ -12,7 +12,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Cargo()
         {
-            Persona = new HashSet<Persona>();
+            Persona = new List<Persona>();
         }
 
         [Key]
@@ -26,6 +26,6 @@ namespace SGC___Modelo
         public bool cargoDisponible { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Persona> Persona { get; set; }
+        public virtual List<Persona> Persona { get; set; }
     }
 }

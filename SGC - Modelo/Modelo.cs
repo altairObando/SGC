@@ -134,7 +134,6 @@ namespace SGC___Modelo
         public virtual DbSet<Riesgos> Riesgos { get; set; }
         public virtual DbSet<Satisfactorio> Satisfactorio { get; set; }
         public virtual DbSet<Seleccion> Seleccion { get; set; }
-        public virtual DbSet<Servicio> Servicio { get; set; }
         public virtual DbSet<TipoCliente> TipoCliente { get; set; }
         public virtual DbSet<TipoEquipo> TipoEquipo { get; set; }
         public virtual DbSet<TipoRadiacion> TipoRadiacion { get; set; }
@@ -172,11 +171,6 @@ namespace SGC___Modelo
 
             modelBuilder.Entity<Cliente>()
                 .HasMany(e => e.FG17_ContratoPorIncorporacion)
-                .WithRequired(e => e.Cliente)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Cliente>()
-                .HasMany(e => e.Servicio)
                 .WithRequired(e => e.Cliente)
                 .WillCascadeOnDelete(false);
 

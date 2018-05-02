@@ -11,10 +11,10 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG23_SatisfaccionCliente()
         {
-            EvaluacionCertificados = new HashSet<EvaluacionCertificados>();
-            PrestacionServicio = new HashSet<PrestacionServicio>();
-            Puntualidad = new HashSet<Puntualidad>();
-            MotivacionInteres = new HashSet<MotivacionInteres>();
+            EvaluacionCertificados = new List<EvaluacionCertificados>();
+            PrestacionServicio = new List<PrestacionServicio>();
+            Puntualidad = new List<Puntualidad>();
+            MotivacionInteres = new List<MotivacionInteres>();
         }
 
         [Key]
@@ -26,16 +26,16 @@ namespace SGC___Modelo
         public string opcional { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EvaluacionCertificados> EvaluacionCertificados { get; set; }
+        public virtual List<EvaluacionCertificados> EvaluacionCertificados { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PrestacionServicio> PrestacionServicio { get; set; }
+        public virtual List<PrestacionServicio> PrestacionServicio { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Puntualidad> Puntualidad { get; set; }
+        public virtual List<Puntualidad> Puntualidad { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MotivacionInteres> MotivacionInteres { get; set; }
+        public virtual List<MotivacionInteres> MotivacionInteres { get; set; }
 
         public virtual Gestion Gestion { get; set; }
     }

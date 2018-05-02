@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG21_EvaluacionInicial()
         {
-            FG21_Evaluadores = new HashSet<FG21_Evaluadores>();
+            FG21_Evaluadores = new List<FG21_Evaluadores>();
         }
 
         [Key]
@@ -32,7 +32,7 @@ namespace SGC___Modelo
         public double preg5 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG21_Evaluadores> FG21_Evaluadores { get; set; }
+        public virtual List<FG21_Evaluadores> FG21_Evaluadores { get; set; }
 
         public virtual Gestion Gestion { get; set; }
 

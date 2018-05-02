@@ -11,8 +11,8 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG28_ImplementacionAcc()
         {
-            FG28_PlanAccion = new HashSet<FG28_PlanAccion>();
-            FG28_RevisionSeguimiento = new HashSet<FG28_RevisionSeguimiento>();
+            FG28_PlanAccion = new List<FG28_PlanAccion>();
+            FG28_RevisionSeguimiento = new List<FG28_RevisionSeguimiento>();
         }
 
         [Key]
@@ -43,10 +43,10 @@ namespace SGC___Modelo
         public DateTime fechaCierre { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG28_PlanAccion> FG28_PlanAccion { get; set; }
+        public virtual List<FG28_PlanAccion> FG28_PlanAccion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG28_RevisionSeguimiento> FG28_RevisionSeguimiento { get; set; }
+        public virtual List<FG28_RevisionSeguimiento> FG28_RevisionSeguimiento { get; set; }
 
         public virtual Gestion Gestion { get; set; }
 

@@ -12,7 +12,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Pregunta()
         {
-            Seleccion = new HashSet<Seleccion>();
+            Seleccion = new List<Seleccion>();
         }
 
         [Key]
@@ -25,6 +25,6 @@ namespace SGC___Modelo
         public bool activa { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Seleccion> Seleccion { get; set; }
+        public virtual List<Seleccion> Seleccion { get; set; }
     }
 }

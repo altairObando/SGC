@@ -12,7 +12,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public EstadoSolicitud()
         {
-            FG10Estados = new HashSet<FG10Estados>();
+            FG10Estados = new List<FG10Estados>();
         }
 
         [Key]
@@ -25,6 +25,6 @@ namespace SGC___Modelo
         public bool activo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG10Estados> FG10Estados { get; set; }
+        public virtual List<FG10Estados> FG10Estados { get; set; }
     }
 }

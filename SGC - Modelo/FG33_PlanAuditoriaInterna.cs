@@ -11,8 +11,8 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG33_PlanAuditoriaInterna()
         {
-            Evaluadores = new HashSet<Evaluadores>();
-            FG33Detalle = new HashSet<FG33Detalle>();
+            Evaluadores = new List<Evaluadores>();
+            FG33Detalle = new List<FG33Detalle>();
         }
 
         [Key]
@@ -37,10 +37,10 @@ namespace SGC___Modelo
         public string cliclo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Evaluadores> Evaluadores { get; set; }
+        public virtual List<Evaluadores> Evaluadores { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG33Detalle> FG33Detalle { get; set; }
+        public virtual List<FG33Detalle> FG33Detalle { get; set; }
 
         public virtual Gestion Gestion { get; set; }
     }

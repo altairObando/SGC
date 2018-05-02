@@ -12,7 +12,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TiposConflicto()
         {
-            FG04_ConflictoInteres = new HashSet<FG04_ConflictoInteres>();
+            FG04_ConflictoInteres = new List<FG04_ConflictoInteres>();
         }
 
         [Key]
@@ -23,6 +23,6 @@ namespace SGC___Modelo
         public string descripcion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG04_ConflictoInteres> FG04_ConflictoInteres { get; set; }
+        public virtual List<FG04_ConflictoInteres> FG04_ConflictoInteres { get; set; }
     }
 }

@@ -12,9 +12,9 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Satisfactorio()
         {
-            EvaluacionCertificados = new HashSet<EvaluacionCertificados>();
-            PrestacionServicio = new HashSet<PrestacionServicio>();
-            Puntualidad = new HashSet<Puntualidad>();
+            EvaluacionCertificados = new List<EvaluacionCertificados>();
+            PrestacionServicio = new List<PrestacionServicio>();
+            Puntualidad = new List<Puntualidad>();
         }
 
         [Key]
@@ -26,12 +26,12 @@ namespace SGC___Modelo
         public string explicacion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EvaluacionCertificados> EvaluacionCertificados { get; set; }
+        public virtual List<EvaluacionCertificados> EvaluacionCertificados { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PrestacionServicio> PrestacionServicio { get; set; }
+        public virtual List<PrestacionServicio> PrestacionServicio { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Puntualidad> Puntualidad { get; set; }
+        public virtual List<Puntualidad> Puntualidad { get; set; }
     }
 }

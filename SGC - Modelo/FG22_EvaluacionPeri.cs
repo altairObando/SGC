@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG22_EvaluacionPeri()
         {
-            FG22_Evaluadores = new HashSet<FG22_Evaluadores>();
+            FG22_Evaluadores = new List<FG22_Evaluadores>();
         }
 
         [Key]
@@ -36,7 +36,7 @@ namespace SGC___Modelo
         public bool calificacionFinal { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG22_Evaluadores> FG22_Evaluadores { get; set; }
+        public virtual List<FG22_Evaluadores> FG22_Evaluadores { get; set; }
 
         public virtual Gestion Gestion { get; set; }
 

@@ -12,8 +12,8 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Equipo()
         {
-            FG15_Especificaciones = new HashSet<FG15_Especificaciones>();
-            EquiposEntrega = new HashSet<EquiposEntrega>();
+            FG15_Especificaciones = new List<FG15_Especificaciones>();
+            EquiposEntrega = new List<EquiposEntrega>();
         }
 
         [Key]
@@ -42,10 +42,10 @@ namespace SGC___Modelo
         public string ubicacion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG15_Especificaciones> FG15_Especificaciones { get; set; }
+        public virtual List<FG15_Especificaciones> FG15_Especificaciones { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EquiposEntrega> EquiposEntrega { get; set; }
+        public virtual List<EquiposEntrega> EquiposEntrega { get; set; }
 
         public virtual fabricanteEquipo fabricanteEquipo { get; set; }
 

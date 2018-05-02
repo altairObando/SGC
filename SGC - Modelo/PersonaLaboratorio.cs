@@ -12,8 +12,8 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PersonaLaboratorio()
         {
-            FG34_ReunionInicialAuditoriaInterna = new HashSet<FG34_ReunionInicialAuditoriaInterna>();
-            FG35_LevantamientoDeEvidencia = new HashSet<FG35_LevantamientoDeEvidencia>();
+            FG34_ReunionInicialAuditoriaInterna = new List<FG34_ReunionInicialAuditoriaInterna>();
+            FG35_LevantamientoDeEvidencia = new List<FG35_LevantamientoDeEvidencia>();
         }
 
         [Key]
@@ -24,10 +24,10 @@ namespace SGC___Modelo
         public int id_persona { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG34_ReunionInicialAuditoriaInterna> FG34_ReunionInicialAuditoriaInterna { get; set; }
+        public virtual List<FG34_ReunionInicialAuditoriaInterna> FG34_ReunionInicialAuditoriaInterna { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG35_LevantamientoDeEvidencia> FG35_LevantamientoDeEvidencia { get; set; }
+        public virtual List<FG35_LevantamientoDeEvidencia> FG35_LevantamientoDeEvidencia { get; set; }
 
         public virtual Laboratorio Laboratorio { get; set; }
 

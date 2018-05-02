@@ -12,7 +12,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TipoSolicitud()
         {
-            FG08Detalle = new HashSet<FG08Detalle>();
+            FG08Detalle = new List<FG08Detalle>();
         }
 
         [Key]
@@ -25,6 +25,6 @@ namespace SGC___Modelo
         public bool activo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG08Detalle> FG08Detalle { get; set; }
+        public virtual List<FG08Detalle> FG08Detalle { get; set; }
     }
 }

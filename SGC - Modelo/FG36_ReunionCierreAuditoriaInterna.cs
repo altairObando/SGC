@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG36_ReunionCierreAuditoriaInterna()
         {
-            FG36Participantes = new HashSet<FG36Participantes>();
+            FG36Participantes = new List<FG36Participantes>();
         }
 
         [Key]
@@ -44,7 +44,7 @@ namespace SGC___Modelo
         public DateTime horaTerminacion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG36Participantes> FG36Participantes { get; set; }
+        public virtual List<FG36Participantes> FG36Participantes { get; set; }
 
         public virtual Gestion Gestion { get; set; }
     }

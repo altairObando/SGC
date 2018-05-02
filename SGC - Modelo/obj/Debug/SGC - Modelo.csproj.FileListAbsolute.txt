@@ -19,6 +19,5 @@ C:\Users\altair\Source\Repos\SGC\SGC - Modelo\bin\Debug\EntityFramework.xml
 C:\Users\altair\Source\Repos\SGC\SGC - Modelo\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\altair\Source\Repos\SGC\SGC - Modelo\bin\Debug\es\EntityFramework.resources.dll
 C:\Users\altair\Source\Repos\SGC\SGC - Modelo\bin\Debug\es\EntityFramework.SqlServer.resources.dll
-C:\Users\altair\Source\Repos\SGC\SGC - Modelo\obj\Debug\SGC - Modelo.csprojResolveAssemblyReference.cache
 C:\Users\altair\Source\Repos\SGC\SGC - Modelo\obj\Debug\SGC - Modelo.dll
 C:\Users\altair\Source\Repos\SGC\SGC - Modelo\obj\Debug\SGC - Modelo.pdb

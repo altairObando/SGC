@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG06_TratamientoRiesgos()
         {
-            FG06Detalle = new HashSet<FG06Detalle>();
+            FG06Detalle = new List<FG06Detalle>();
         }
 
         [Key]
@@ -20,7 +20,7 @@ namespace SGC___Modelo
         public int idGestion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG06Detalle> FG06Detalle { get; set; }
+        public virtual List<FG06Detalle> FG06Detalle { get; set; }
 
         public virtual Gestion Gestion { get; set; }
     }

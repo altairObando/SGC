@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG12_EntregaEquipos()
         {
-            EquiposEntrega = new HashSet<EquiposEntrega>();
+            EquiposEntrega = new List<EquiposEntrega>();
         }
 
         [Key]
@@ -30,7 +30,7 @@ namespace SGC___Modelo
         public virtual Cliente Cliente { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EquiposEntrega> EquiposEntrega { get; set; }
+        public virtual List<EquiposEntrega> EquiposEntrega { get; set; }
 
         public virtual Gestion Gestion { get; set; }
     }

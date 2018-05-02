@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG45_RevisionPorLaDireccion()
         {
-            FG45_Participantes = new HashSet<FG45_Participantes>();
+            FG45_Participantes = new List<FG45_Participantes>();
         }
 
         [Key]
@@ -20,7 +20,7 @@ namespace SGC___Modelo
         public int idGestion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG45_Participantes> FG45_Participantes { get; set; }
+        public virtual List<FG45_Participantes> FG45_Participantes { get; set; }
 
         public virtual Gestion Gestion { get; set; }
     }

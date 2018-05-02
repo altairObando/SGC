@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Riesgos()
         {
-            FG05_MatrizDeRiesgos = new HashSet<FG05_MatrizDeRiesgos>();
+            FG05_MatrizDeRiesgos = new List<FG05_MatrizDeRiesgos>();
         }
 
         [Key]
@@ -25,6 +25,6 @@ namespace SGC___Modelo
         public string descripcion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG05_MatrizDeRiesgos> FG05_MatrizDeRiesgos { get; set; }
+        public virtual List<FG05_MatrizDeRiesgos> FG05_MatrizDeRiesgos { get; set; }
     }
 }

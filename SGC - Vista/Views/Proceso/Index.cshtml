@@ -1,56 +1,120 @@
-﻿@model IEnumerable<SGC___Modelo.Proceso>
-
-@{
+﻿@{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Procesos Sin Finalizar</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo Proceso", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.EstadoGestion.estado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.fechaInicio)
-        </th>
-        <th>
-            Fecha Fin
-            @*@Html.DisplayNameFor(model => model.fechaFin)*@
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.anulado)
-        </th>
-        <th>Documentos</th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.EstadoGestion.estado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fechaInicio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fechaFin)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.anulado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem=> item.Documentos)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idProceso }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idProceso }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idProceso })
-        </td>
-    </tr>
-}
-
+<table class="table table-borderless" id="tablaProcesos">
+    <thead>
+        <tr>
+            <th>
+                Institución
+            </th>
+            <th>
+                Estado 
+            </th>
+            <th>
+                Fecha Inicio
+            </th>
+            <th>
+                Fecha Fin
+            </th>
+            <th>
+                Anulado?
+            </th>
+            <th>
+                Opciones
+            </th>
+        </tr>
+    </thead>
+    <tbody></tbody>
 </table>
+<link href="~/Content/datatables/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="~/Content/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+@section Scripts
+{    
+    <script src="~/Scripts/dataTables/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/dataTables/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/dataTables/dataTables.jqueryui.min.js"></script>
+
+    <script>
+        var popUp;
+        var tblProcesos;
+        $(document).ready(function () {
+            tblProcesos = $('#tablaProcesos').DataTable({
+                "ajax": {
+                    "url" :"/Proceso/getProcesos",
+                    "type": "GET",
+                    "dataType": "JSON",
+                },
+                "columns": [
+                    { "data" : "institucion" },
+                    { "data" : "estado" },
+                    { "data" : "finicio", "render": function (data) { return new Date(parseInt(data.replace('/Date(', ''))).toLocaleDateString(); } },
+                    {
+                        "data": "ffin", "render": function (data) {
+                            if (data != null)
+                                return new Date(parseInt(data.replace('/Date(', ''))).toLocaleDateString();
+                            else
+                                return "Sin Finalizar";
+                        }
+                    },
+                    { "data" : "anulado"},
+                    {
+                        "data": "id", "render": function (data) {
+                            return "<a href='#' onClick=showPopUp('/Proceso/Editar/" + data + "')>Editar </a> | <a href='#'>Eliminar</a> | <a href='#'>Añadir Doc.</a>";
+                        }
+                    }
+                ],
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+                }
+            });
+        });
+        function showPopUp(url) {
+            var formDiv = $('<div/>');
+            $.get(url)
+            .done(function (response) {
+                formDiv.html(response);
+
+                popUp = formDiv.dialog({
+                    autoOpen: true,
+                    resizable: true,
+                    title: "Editar Proceso",
+                    height: 400,
+                    width: 800,
+                    open: function () {
+                        $('#fechaInicio').datepicker({ dateFormat: 'dd/mm/yy' });
+                        $('#fechaFin').datepicker({ dateFormat: 'dd/mm/yy' });
+                    },
+                    close: function () {
+                        popUp.dialog('destroy').remove();
+                    }
+
+                });
+            });
+        }
+        function submitForm(form) {
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: form.action,
+                    data: $(form).serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            popUp.dialog('close');
+                            tblProcesos.ajax.reload();
+                        } else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            }
+            return false;
+        }
+    </script>
+}

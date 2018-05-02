@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG09_ControlCambios()
         {
-            FG09HistoricoCambios = new HashSet<FG09HistoricoCambios>();
+            FG09HistoricoCambios = new List<FG09HistoricoCambios>();
         }
 
         [Key]
@@ -21,7 +21,7 @@ namespace SGC___Modelo
         public int idGestion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG09HistoricoCambios> FG09HistoricoCambios { get; set; }
+        public virtual List<FG09HistoricoCambios> FG09HistoricoCambios { get; set; }
 
         public virtual Gestion Gestion { get; set; }
     }

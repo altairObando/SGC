@@ -12,7 +12,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FormatoGestion()
         {
-            FormatoPlantilla = new HashSet<FormatoPlantilla>();
+            FormatoPlantilla = new List<FormatoPlantilla>();
         }
 
         [Key]
@@ -25,7 +25,7 @@ namespace SGC___Modelo
         public string codigo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FormatoPlantilla> FormatoPlantilla { get; set; }
+        public virtual List<FormatoPlantilla> FormatoPlantilla { get; set; }
 
         public virtual ProcesoGestion ProcesoGestion { get; set; }
     }

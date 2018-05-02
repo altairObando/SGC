@@ -11,8 +11,8 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG35_LevantamientoDeEvidencia()
         {
-            FG35_hallazgos = new HashSet<FG35_hallazgos>();
-            Involucrados = new HashSet<Involucrados>();
+            FG35_hallazgos = new List<FG35_hallazgos>();
+            Involucrados = new List<Involucrados>();
         }
 
         [Key]
@@ -28,10 +28,10 @@ namespace SGC___Modelo
         public DateTime hora { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG35_hallazgos> FG35_hallazgos { get; set; }
+        public virtual List<FG35_hallazgos> FG35_hallazgos { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Involucrados> Involucrados { get; set; }
+        public virtual List<Involucrados> Involucrados { get; set; }
 
         public virtual Gestion Gestion { get; set; }
 

@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG42_AccionesDeSeguimientoDeLaRevisionPorLaDireccionPrevia()
         {
-            FG42Detalle = new HashSet<FG42Detalle>();
+            FG42Detalle = new List<FG42Detalle>();
         }
 
         [Key]
@@ -22,7 +22,7 @@ namespace SGC___Modelo
         public int id_persona { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG42Detalle> FG42Detalle { get; set; }
+        public virtual List<FG42Detalle> FG42Detalle { get; set; }
 
         public virtual Gestion Gestion { get; set; }
 

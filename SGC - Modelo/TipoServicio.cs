@@ -12,7 +12,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TipoServicio()
         {
-            FG13_ProformaServicio = new HashSet<FG13_ProformaServicio>();
+            FG13_ProformaServicio = new List<FG13_ProformaServicio>();
         }
 
         [Key]
@@ -25,6 +25,6 @@ namespace SGC___Modelo
         public bool activo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG13_ProformaServicio> FG13_ProformaServicio { get; set; }
+        public virtual List<FG13_ProformaServicio> FG13_ProformaServicio { get; set; }
     }
 }

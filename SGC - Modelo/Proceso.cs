@@ -12,40 +12,40 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Proceso()
         {
-            Gestion = new HashSet<Gestion>();
-            Involucrado = new HashSet<Involucrado>();
-            Servicio = new HashSet<Servicio>();
+            Gestion = new List<Gestion>();
+            Involucrado = new List<Involucrado>();
         }
 
         [Key]
         public int idProceso { get; set; }
 
-        [Display(Name ="Estado")]
         public int? idEstadoGestion { get; set; }
 
+        public int? idCliente { get; set; }
+
         [Column(TypeName = "date")]
-        [Display(Name ="Fecha Inicio")]
+        [DataType(DataType.Text)]
+        [Display(Name ="Fecha de Inicio")]    
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString ="{0:dd/MM/yy}")]    
         public DateTime fechaInicio { get; set; }
 
         [Column(TypeName = "date")]
-        [Display(Name ="Finalizado")]
+        [DataType(DataType.Text)]
+        [Display(Name = "Fecha de Fin")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yy}")]
         public DateTime? fechaFin { get; set; }
 
-        [Display(Name = "Proceso Anulado")]
+        [Display(Name ="Anulado")]
         public bool anulado { get; set; }
-        [NotMapped]
-        public int Documentos {
-            get { return Gestion.Count; }
-        }
+
+        public virtual Cliente Cliente { get; set; }
+
         public virtual EstadoGestion EstadoGestion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Gestion> Gestion { get; set; }
+        public virtual List<Gestion> Gestion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Involucrado> Involucrado { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Servicio> Servicio { get; set; }
+        public virtual List<Involucrado> Involucrado { get; set; }
     }
 }

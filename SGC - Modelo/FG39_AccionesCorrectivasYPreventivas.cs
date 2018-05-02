@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG39_AccionesCorrectivasYPreventivas()
         {
-            FG39_Detalle = new HashSet<FG39_Detalle>();
+            FG39_Detalle = new List<FG39_Detalle>();
         }
 
         [Key]
@@ -22,7 +22,7 @@ namespace SGC___Modelo
         public int id_persona { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG39_Detalle> FG39_Detalle { get; set; }
+        public virtual List<FG39_Detalle> FG39_Detalle { get; set; }
 
         public virtual Gestion Gestion { get; set; }
 

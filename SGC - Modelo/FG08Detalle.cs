@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG08Detalle()
         {
-            FG09HistoricoCambios = new HashSet<FG09HistoricoCambios>();
+            FG09HistoricoCambios = new List<FG09HistoricoCambios>();
         }
 
         [Key]
@@ -29,7 +29,7 @@ namespace SGC___Modelo
         public virtual FG08_SolicitudCME FG08_SolicitudCME { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG09HistoricoCambios> FG09HistoricoCambios { get; set; }
+        public virtual List<FG09HistoricoCambios> FG09HistoricoCambios { get; set; }
 
         public virtual FormatoPlantilla FormatoPlantilla { get; set; }
 

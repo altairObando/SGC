@@ -176,7 +176,6 @@
     <Compile Include="Riesgos.cs" />
     <Compile Include="Satisfactorio.cs" />
     <Compile Include="Seleccion.cs" />
-    <Compile Include="Servicio.cs" />
     <Compile Include="TipoCliente.cs" />
     <Compile Include="TipoEquipo.cs" />
     <Compile Include="TipoRadiacion.cs" />
@@ -188,6 +187,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SGC.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

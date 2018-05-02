@@ -20,7 +20,7 @@ namespace SGC___Vista
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.*",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/adminlte").Include(

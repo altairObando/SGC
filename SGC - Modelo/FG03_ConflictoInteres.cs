@@ -11,8 +11,8 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG03_ConflictoInteres()
         {
-            Actividades = new HashSet<Actividades>();
-            Consanguiniedad = new HashSet<Consanguiniedad>();
+            Actividades = new List<Actividades>();
+            Consanguiniedad = new List<Consanguiniedad>();
         }
 
         [Key]
@@ -21,10 +21,10 @@ namespace SGC___Modelo
         public int idGestion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Actividades> Actividades { get; set; }
+        public virtual List<Actividades> Actividades { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Consanguiniedad> Consanguiniedad { get; set; }
+        public virtual List<Consanguiniedad> Consanguiniedad { get; set; }
 
         public virtual Gestion Gestion { get; set; }
     }

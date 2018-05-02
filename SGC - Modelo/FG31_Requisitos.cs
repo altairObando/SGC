@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG31_Requisitos()
         {
-            FG31_Criterio = new HashSet<FG31_Criterio>();
+            FG31_Criterio = new List<FG31_Criterio>();
         }
 
         [Key]
@@ -24,6 +24,6 @@ namespace SGC___Modelo
         public double ponderaje { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG31_Criterio> FG31_Criterio { get; set; }
+        public virtual List<FG31_Criterio> FG31_Criterio { get; set; }
     }
 }

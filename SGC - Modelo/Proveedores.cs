@@ -11,10 +11,10 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Proveedores()
         {
-            FG19_SeguimientoControl = new HashSet<FG19_SeguimientoControl>();
-            FG21_EvaluacionInicial = new HashSet<FG21_EvaluacionInicial>();
-            FG22_EvaluacionPeri = new HashSet<FG22_EvaluacionPeri>();
-            ProveedoresCalificados = new HashSet<ProveedoresCalificados>();
+            FG19_SeguimientoControl = new List<FG19_SeguimientoControl>();
+            FG21_EvaluacionInicial = new List<FG21_EvaluacionInicial>();
+            FG22_EvaluacionPeri = new List<FG22_EvaluacionPeri>();
+            ProveedoresCalificados = new List<ProveedoresCalificados>();
         }
 
         [Key]
@@ -48,15 +48,15 @@ namespace SGC___Modelo
         public bool activo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG19_SeguimientoControl> FG19_SeguimientoControl { get; set; }
+        public virtual List<FG19_SeguimientoControl> FG19_SeguimientoControl { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG21_EvaluacionInicial> FG21_EvaluacionInicial { get; set; }
+        public virtual List<FG21_EvaluacionInicial> FG21_EvaluacionInicial { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG22_EvaluacionPeri> FG22_EvaluacionPeri { get; set; }
+        public virtual List<FG22_EvaluacionPeri> FG22_EvaluacionPeri { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProveedoresCalificados> ProveedoresCalificados { get; set; }
+        public virtual List<ProveedoresCalificados> ProveedoresCalificados { get; set; }
     }
 }

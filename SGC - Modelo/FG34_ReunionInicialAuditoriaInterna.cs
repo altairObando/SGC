@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG34_ReunionInicialAuditoriaInterna()
         {
-            FG34Participantes = new HashSet<FG34Participantes>();
+            FG34Participantes = new List<FG34Participantes>();
         }
 
         [Key]
@@ -34,7 +34,7 @@ namespace SGC___Modelo
         public int idGestion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG34Participantes> FG34Participantes { get; set; }
+        public virtual List<FG34Participantes> FG34Participantes { get; set; }
 
         public virtual Gestion Gestion { get; set; }
 

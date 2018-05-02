@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG32_ListaVerificacion()
         {
-            FG32_Lista = new HashSet<FG32_Lista>();
+            FG32_Lista = new List<FG32_Lista>();
         }
 
         [Key]
@@ -26,7 +26,7 @@ namespace SGC___Modelo
         public int idLaboratorio { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG32_Lista> FG32_Lista { get; set; }
+        public virtual List<FG32_Lista> FG32_Lista { get; set; }
 
         public virtual Gestion Gestion { get; set; }
 

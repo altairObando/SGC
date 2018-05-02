@@ -11,11 +11,13 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG26_AtencionReclamos()
         {
-            FG26_Acciones = new HashSet<FG26_Acciones>();
+            FG26_Acciones = new List<FG26_Acciones>();
         }
 
         [Key]
         public int idFG26 { get; set; }
+
+        public int idGestion { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime fecha { get; set; }
@@ -48,10 +50,8 @@ namespace SGC___Modelo
         [StringLength(100)]
         public string recibidoPor { get; set; }
 
-        public int idGestion { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG26_Acciones> FG26_Acciones { get; set; }
+        public virtual List<FG26_Acciones> FG26_Acciones { get; set; }
 
         public virtual Gestion Gestion { get; set; }
     }

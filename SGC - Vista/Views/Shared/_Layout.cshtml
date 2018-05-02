@@ -26,9 +26,10 @@
         </div>
     </div>
 @* Seccion para los Scripts *@
-
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
 <script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 <script src="~/Scripts/bootstrap.bundle.min.js"></script>
 <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
 <script src="~/Scripts/adminlte/adminlte.min.js"></script>
@@ -38,6 +39,14 @@
 <script src="~/Scripts/sparkline/jquery.sparkline.min.js"></script>
 <script src="~/Scripts/umd/popper.min.js"></script>
 <script src="~/Scripts/umd/popper-utils.min.js"></script>
+
 @RenderSection("scripts", required: false)
+    <script>
+        $(document).ready(function () {
+            $.validator.methods.date = function (value, element) {
+                return this.optional(element) || Globalize.parseDate(value, "dd/MM/yyyy", "es-Ni");
+            }
+        })
+    </script>
 </body>
 </html>

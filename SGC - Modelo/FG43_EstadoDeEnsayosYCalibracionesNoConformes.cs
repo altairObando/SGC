@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG43_EstadoDeEnsayosYCalibracionesNoConformes()
         {
-            FG43_Detalle = new HashSet<FG43_Detalle>();
+            FG43_Detalle = new List<FG43_Detalle>();
         }
 
         [Key]
@@ -22,7 +22,7 @@ namespace SGC___Modelo
         public int idGestion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG43_Detalle> FG43_Detalle { get; set; }
+        public virtual List<FG43_Detalle> FG43_Detalle { get; set; }
 
         public virtual Gestion Gestion { get; set; }
 

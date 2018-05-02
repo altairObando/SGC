@@ -49,19 +49,35 @@
 @section Scripts{
 <script>
     $(document).ready(function () {
+        
         loadEstados();
+        //setInterval(loadEstados, 3000);
     });
+
     function loadEstados() {
         $.ajax({
             url: "/Home/getEstados",
             method: "GET",
-            dataType: "json"
-        }).done(function (data) {
-            $('#lblProceso').text(data['proceso']);
-            $('#lblCalibracion').text(data['calibracion']);
-            $('#lblRevision').text(data['revision']);
-            $('#lblEntrega').text(data['entrega']);
+            dataType: "json",
+            success: function (data) {
+                $('#lblProceso').text(data['proceso']);
+                $('#lblCalibracion').text(data['calibracion']);
+                $('#lblRevision').text(data['revision']);
+                $('#lblEntrega').text(data['entrega']);
+            },
+            error: function () {
+                alert('No se ha logrado cargar los estados');
+            }
         });
+    }
+    function loadGraficos() {
+
+    }
+    function loadNotificaciones() {
+
+    }
+    function loadMensajes() {
+
     }
 </script>
     }

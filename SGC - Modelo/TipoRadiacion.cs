@@ -12,8 +12,8 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TipoRadiacion()
         {
-            ClienteRadiacion = new HashSet<ClienteRadiacion>();
-            FG10Radiaciones = new HashSet<FG10Radiaciones>();
+            ClienteRadiacion = new List<ClienteRadiacion>();
+            FG10Radiaciones = new List<FG10Radiaciones>();
         }
 
         [Key]
@@ -26,9 +26,9 @@ namespace SGC___Modelo
         public bool activo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClienteRadiacion> ClienteRadiacion { get; set; }
+        public virtual List<ClienteRadiacion> ClienteRadiacion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG10Radiaciones> FG10Radiaciones { get; set; }
+        public virtual List<FG10Radiaciones> FG10Radiaciones { get; set; }
     }
 }

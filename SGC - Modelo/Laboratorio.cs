@@ -12,13 +12,13 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Laboratorio()
         {
-            AreaLaboratorio = new HashSet<AreaLaboratorio>();
-            FG27_TrabajosNoConformes = new HashSet<FG27_TrabajosNoConformes>();
-            FG28_ImplementacionAcc = new HashSet<FG28_ImplementacionAcc>();
-            FG30DetalleAuditoria = new HashSet<FG30DetalleAuditoria>();
-            FG32_ListaVerificacion = new HashSet<FG32_ListaVerificacion>();
-            FG33Detalle = new HashSet<FG33Detalle>();
-            PersonaLaboratorio = new HashSet<PersonaLaboratorio>();
+            AreaLaboratorio = new List<AreaLaboratorio>();
+            FG27_TrabajosNoConformes = new List<FG27_TrabajosNoConformes>();
+            FG28_ImplementacionAcc = new List<FG28_ImplementacionAcc>();
+            FG30DetalleAuditoria = new List<FG30DetalleAuditoria>();
+            FG32_ListaVerificacion = new List<FG32_ListaVerificacion>();
+            FG33Detalle = new List<FG33Detalle>();
+            PersonaLaboratorio = new List<PersonaLaboratorio>();
         }
 
         [Key]
@@ -31,24 +31,24 @@ namespace SGC___Modelo
         public bool activo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AreaLaboratorio> AreaLaboratorio { get; set; }
+        public virtual List<AreaLaboratorio> AreaLaboratorio { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG27_TrabajosNoConformes> FG27_TrabajosNoConformes { get; set; }
+        public virtual List<FG27_TrabajosNoConformes> FG27_TrabajosNoConformes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG28_ImplementacionAcc> FG28_ImplementacionAcc { get; set; }
+        public virtual List<FG28_ImplementacionAcc> FG28_ImplementacionAcc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG30DetalleAuditoria> FG30DetalleAuditoria { get; set; }
+        public virtual List<FG30DetalleAuditoria> FG30DetalleAuditoria { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG32_ListaVerificacion> FG32_ListaVerificacion { get; set; }
+        public virtual List<FG32_ListaVerificacion> FG32_ListaVerificacion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG33Detalle> FG33Detalle { get; set; }
+        public virtual List<FG33Detalle> FG33Detalle { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PersonaLaboratorio> PersonaLaboratorio { get; set; }
+        public virtual List<PersonaLaboratorio> PersonaLaboratorio { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -17,109 +18,50 @@ namespace SGC___Vista.Controllers
         // GET: Proceso
         public ActionResult Index()
         {
-            var proceso = db.Proceso.Include(p => p.EstadoGestion);
-            return View(proceso.ToList());
-        }
-
-        // GET: Proceso/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Proceso proceso = db.Proceso.Find(id);
-            if (proceso == null)
-            {
-                return HttpNotFound();
-            }
-            return View(proceso);
-        }
-
-        // GET: Proceso/Create
-        public ActionResult Create()
-        {
-            ViewBag.idEstadoGestion = new SelectList(db.EstadoGestion, "idEstadoGestion", "estado");
             return View();
         }
-
-        // POST: Proceso/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idProceso,idEstadoGestion,fechaInicio,fechaFin,anulado")] Proceso proceso)
+        [HttpGet]
+        public JsonResult getProcesos()
         {
-            if (ModelState.IsValid)
-            {
-                db.Proceso.Add(proceso);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            ViewBag.idEstadoGestion = new SelectList(db.EstadoGestion, "idEstadoGestion", "estado", proceso.idEstadoGestion);
-            return View(proceso);
+            var P = db.Proceso.Include(x => x.Cliente)
+                              .Include(y => y.EstadoGestion);
+            var result = from item in P
+                         select new {
+                             institucion = item.Cliente.nombreInstitucion,
+                             estado = item.EstadoGestion.estado,
+                             finicio = item.fechaInicio,
+                             ffin = item.fechaFin,
+                             anulado = item.anulado,
+                             id = item.idProceso
+                         };
+            return Json(new { data = result }, JsonRequestBehavior.AllowGet);
         }
-
-        // GET: Proceso/Edit/5
-        public ActionResult Edit(int? id)
+        [HttpGet]
+        public ActionResult Editar(int? id)
         {
-            if (id == null)
-            {
+            if(id == null)
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Proceso proceso = db.Proceso.Find(id);
-            if (proceso == null)
-            {
+            var p = db.Proceso.Find(id);
+            if (p == null)
                 return HttpNotFound();
-            }
-            ViewBag.idEstadoGestion = new SelectList(db.EstadoGestion, "idEstadoGestion", "estado", proceso.idEstadoGestion);
-            return View(proceso);
+            ViewBag.idEstadoGestion = new SelectList(db.EstadoGestion, "idEstadoGestion", "estado");
+            ViewBag.idCliente = new SelectList(db.Cliente, "idCliente", "nombreInstitucion");
+            return View(p);
         }
-
-        // POST: Proceso/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idProceso,idEstadoGestion,fechaInicio,fechaFin,anulado")] Proceso proceso)
+        public JsonResult Editar([Bind(Include ="idProceso, idEstadoGestion, idCliente, fechaInicio, fechaFin, anulado")]Proceso proceso)
         {
-            if (ModelState.IsValid)
+            if(ModelState.IsValid)
             {
                 db.Entry(proceso).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return Json(new {success = true, message = "Actualizado!" }, JsonRequestBehavior.AllowGet);
             }
-            ViewBag.idEstadoGestion = new SelectList(db.EstadoGestion, "idEstadoGestion", "estado", proceso.idEstadoGestion);
-            return View(proceso);
+            ViewBag.idEstadoGestion = new SelectList(db.EstadoGestion, "idEstadoGestion", "estado");
+            ViewBag.idCliente = new SelectList(db.Cliente, "idCliente", "nombreInstitucion");
+            return Json(new { success = false, message = "Error!" }, JsonRequestBehavior.AllowGet);
         }
-
-        // GET: Proceso/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Proceso proceso = db.Proceso.Find(id);
-            if (proceso == null)
-            {
-                return HttpNotFound();
-            }
-            return View(proceso);
-        }
-
-        // POST: Proceso/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Proceso proceso = db.Proceso.Find(id);
-            db.Proceso.Remove(proceso);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)

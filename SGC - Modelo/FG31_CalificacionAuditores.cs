@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG31_CalificacionAuditores()
         {
-            FG31_Evaluacion = new HashSet<FG31_Evaluacion>();
+            FG31_Evaluacion = new List<FG31_Evaluacion>();
         }
 
         [Key]
@@ -22,7 +22,7 @@ namespace SGC___Modelo
         public int id_persona { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG31_Evaluacion> FG31_Evaluacion { get; set; }
+        public virtual List<FG31_Evaluacion> FG31_Evaluacion { get; set; }
 
         public virtual Gestion Gestion { get; set; }
 

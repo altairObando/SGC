@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG25_AtencionReclamos()
         {
-            FG25_Detalle = new HashSet<FG25_Detalle>();
+            FG25_Detalle = new List<FG25_Detalle>();
         }
 
         [Key]
@@ -38,6 +38,6 @@ namespace SGC___Modelo
         public DateTime fechaCierre { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG25_Detalle> FG25_Detalle { get; set; }
+        public virtual List<FG25_Detalle> FG25_Detalle { get; set; }
     }
 }

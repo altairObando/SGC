@@ -12,7 +12,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public EstadoGestion()
         {
-            Proceso = new HashSet<Proceso>();
+            Proceso = new List<Proceso>();
         }
 
         [Key]
@@ -22,10 +22,10 @@ namespace SGC___Modelo
         [StringLength(50)]
         [Display(Name ="Estado")]
         public string estado { get; set; }
-
+        [Display(Name ="Disponible")]
         public bool disponible { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Proceso> Proceso { get; set; }
+        public virtual List<Proceso> Proceso { get; set; }
     }
 }

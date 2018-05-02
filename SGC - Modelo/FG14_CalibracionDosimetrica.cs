@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG14_CalibracionDosimetrica()
         {
-            FG14Servicios = new HashSet<FG14Servicios>();
+            FG14Servicios = new List<FG14Servicios>();
         }
 
         [Key]
@@ -29,7 +29,7 @@ namespace SGC___Modelo
         public virtual Cliente Cliente { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG14Servicios> FG14Servicios { get; set; }
+        public virtual List<FG14Servicios> FG14Servicios { get; set; }
 
         public virtual Gestion Gestion { get; set; }
     }

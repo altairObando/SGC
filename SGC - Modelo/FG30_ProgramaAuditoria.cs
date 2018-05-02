@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG30_ProgramaAuditoria()
         {
-            FG30DetalleAuditoria = new HashSet<FG30DetalleAuditoria>();
+            FG30DetalleAuditoria = new List<FG30DetalleAuditoria>();
         }
 
         [Key]
@@ -33,7 +33,7 @@ namespace SGC___Modelo
         public DateTime fecha_inicio { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FG30DetalleAuditoria> FG30DetalleAuditoria { get; set; }
+        public virtual List<FG30DetalleAuditoria> FG30DetalleAuditoria { get; set; }
 
         public virtual Gestion Gestion { get; set; }
 

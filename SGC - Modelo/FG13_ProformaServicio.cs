@@ -11,7 +11,7 @@ namespace SGC___Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FG13_ProformaServicio()
         {
-            DetalleFG13 = new HashSet<DetalleFG13>();
+            DetalleFG13 = new List<DetalleFG13>();
         }
 
         [Key]
@@ -29,7 +29,7 @@ namespace SGC___Modelo
         public virtual Cliente Cliente { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetalleFG13> DetalleFG13 { get; set; }
+        public virtual List<DetalleFG13> DetalleFG13 { get; set; }
 
         public virtual Gestion Gestion { get; set; }
 
