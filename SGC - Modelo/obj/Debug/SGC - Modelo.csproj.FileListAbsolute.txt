@@ -10,3 +10,15 @@ C:\Users\altair\Documents\Proyectos\SGC - LAFRAM\SGC - Modelo\bin\Debug\es\Entit
 C:\Users\altair\Documents\Proyectos\SGC - LAFRAM\SGC - Modelo\obj\Debug\SGC - Modelo.dll
 C:\Users\altair\Documents\Proyectos\SGC - LAFRAM\SGC - Modelo\obj\Debug\SGC - Modelo.pdb
 C:\Users\altair\Documents\Proyectos\SGC - LAFRAM\SGC - Modelo\obj\Debug\SGC - Modelo.csprojResolveAssemblyReference.cache
+C:\Users\altair\Source\Repos\SGC\SGC - Modelo\bin\Debug\SGC - Modelo.dll.config
+C:\Users\altair\Source\Repos\SGC\SGC - Modelo\bin\Debug\SGC - Modelo.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Modelo\bin\Debug\SGC - Modelo.pdb
+C:\Users\altair\Source\Repos\SGC\SGC - Modelo\bin\Debug\EntityFramework.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Modelo\bin\Debug\EntityFramework.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\altair\Source\Repos\SGC\SGC - Modelo\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Modelo\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Modelo\obj\Debug\SGC - Modelo.csprojResolveAssemblyReference.cache
+C:\Users\altair\Source\Repos\SGC\SGC - Modelo\obj\Debug\SGC - Modelo.dll
+C:\Users\altair\Source\Repos\SGC\SGC - Modelo\obj\Debug\SGC - Modelo.pdb

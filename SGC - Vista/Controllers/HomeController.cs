@@ -1,30 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
-
+using SGC___Modelo;
 namespace SGC___Vista.Controllers
 {
     public class HomeController : Controller
     {
+        private Modelo db = new Modelo();
         public ActionResult Index()
         {
             return View();
         }
-
-        public ActionResult About()
+        /// <summary>
+        /// Este metodo permite obtener el estado de los procesos que se estan ejecutando
+        /// </summary>
+        /// <returns>Resultado en formato JSON</returns>
+        public ActionResult getEstados()
         {
-            ViewBag.Message = "Your application description page.";
+            var estados = db.Proceso.Include(x => x.EstadoGestion);
 
-            return View();
-        }
+            int EnProceso = estados.Where(x => x.EstadoGestion.estado == "En Proceso").Count();
+            int EnCalibracion = estados.Where(x => x.EstadoGestion.estado == "En Calibración").Count();
+            int Entrega = estados.Where(x => x.EstadoGestion.estado == "Entrega de Equipos").Count();
+            int Revision = estados.Where(x => x.EstadoGestion.estado == "En Revision ").Count();
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return Json(new {proceso = EnProceso, calibracion = EnCalibracion,
+                             entrega = Entrega, revision = Revision}, JsonRequestBehavior.AllowGet);
         }
     }
 }

@@ -6,11 +6,12 @@
         using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
         {
             @Html.AntiForgeryToken()
-            <div class="image">
+            @*<div class="image">
                 <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="UserImage">
-            </div>
+            </div>*@
             <div class="info">
-                @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                @Html.ActionLink(User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                <br />
                 <a href="javascript:document.getElementById('logoutForm').submit()">Cerrar sesión</a>
             </div>
         }
