@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using SGC___Modelo;
 namespace SGC___Vista.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private Modelo db = new Modelo();

@@ -10,6 +10,7 @@ using SGC___Modelo;
 
 namespace SGC___Vista.Controllers.Codigos
 {
+    [Authorize]
     public class CargosController : Controller
     {
         private Modelo db = new Modelo();

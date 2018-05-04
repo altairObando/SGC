@@ -206,6 +206,13 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\SGC - Users.mdf" />
+    <Content Include="App_Data\SGC - Users_log.ldf">
+      <DependentUpon>SGC - Users.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\blue%402x.png" />
+    <Content Include="Content\blue.css" />
+    <Content Include="Content\blue.png" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -1112,6 +1119,7 @@
     <Content Include="Content\datatables\css\mixins.scss" />
     <Content Include="Content\datatables\css\common.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\icheck.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -1261,9 +1269,7 @@
     <Content Include="Views\Shared\_adminNavbar.cshtml" />
     <Content Include="Views\Shared\_sideBar.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\img\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />

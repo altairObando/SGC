@@ -5,7 +5,7 @@
 <h2>Procesos Sin Finalizar</h2>
 
 <p>
-    @Html.ActionLink("Nuevo Proceso", "Create")
+    <a href="#" onclick="showPopUp('/Proceso/Editar/0')">Registrar Proceso</a>
 </p>
 <table class="table table-borderless" id="tablaProcesos">
     <thead>
@@ -41,7 +41,7 @@
     <script src="~/Scripts/dataTables/dataTables.jqueryui.min.js"></script>
 
     <script>
-        var popUp;
+        var dialogo;
         var tblProcesos;
         $(document).ready(function () {
             tblProcesos = $('#tablaProcesos').DataTable({
@@ -80,7 +80,7 @@
             .done(function (response) {
                 formDiv.html(response);
 
-                popUp = formDiv.dialog({
+                dialogo = formDiv.dialog({
                     autoOpen: true,
                     resizable: true,
                     title: "Editar Proceso",
@@ -91,14 +91,19 @@
                         $('#fechaFin').datepicker({ dateFormat: 'dd/mm/yy' });
                     },
                     close: function () {
-                        popUp.dialog('destroy').remove();
+                        dialogo.dialog('destroy').remove();
                     }
 
                 });
             });
         }
+
         function submitForm(form) {
             $.validator.unobtrusive.parse(form);
+            form.submit(function (event) {
+                event.preventDefault();
+            });
+
             if ($(form).valid()) {
                 $.ajax({
                     type: "POST",
@@ -106,15 +111,15 @@
                     data: $(form).serialize(),
                     success: function (data) {
                         if (data.success) {
-                            popUp.dialog('close');
+                            dialogo.dialog('close');
                             tblProcesos.ajax.reload();
                         } else {
                             alert(data.message);
                         }
                     }
                 });
+                return false;
             }
-            return false;
         }
     </script>
 }

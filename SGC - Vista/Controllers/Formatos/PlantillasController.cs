@@ -10,6 +10,7 @@ using SGC___Modelo;
 
 namespace SGC___Vista.Controllers.Formatos
 {
+    [Authorize]
     public class PlantillasController : Controller
     {
         private Modelo db = new Modelo();

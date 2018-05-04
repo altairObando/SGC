@@ -49,9 +49,9 @@ namespace SGC___Vista.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Correo electrónico")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Nombre de usuario")]
+        
+        public string Usuario { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -64,6 +64,10 @@ namespace SGC___Vista.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        [Display(Name ="Nombre de usuario")]
+        public string Usuario { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Correo electrónico")]

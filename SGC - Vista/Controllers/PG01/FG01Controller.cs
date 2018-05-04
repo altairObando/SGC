@@ -10,6 +10,7 @@ using SGC___Modelo;
 
 namespace SGC___Vista.Controllers.PG01
 {
+    [Authorize]
     public class FG01Controller : Controller
     {
         private Modelo db = new Modelo();

@@ -11,6 +11,7 @@ using SGC___Modelo;
 
 namespace SGC___Vista.Controllers
 {
+    [Authorize]
     public class ProcesoController : Controller
     {
         private Modelo db = new Modelo();
@@ -39,13 +40,20 @@ namespace SGC___Vista.Controllers
         [HttpGet]
         public ActionResult Editar(int? id)
         {
-            if(id == null)
+
+            ViewBag.idEstadoGestion = new SelectList(db.EstadoGestion, "idEstadoGestion", "estado");
+            ViewBag.idCliente = new SelectList(db.Cliente, "idCliente", "nombreInstitucion");
+
+
+            if (id == null)
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+            if (id == 0)
+                return View(new Proceso());
+
             var p = db.Proceso.Find(id);
             if (p == null)
                 return HttpNotFound();
-            ViewBag.idEstadoGestion = new SelectList(db.EstadoGestion, "idEstadoGestion", "estado");
-            ViewBag.idCliente = new SelectList(db.Cliente, "idCliente", "nombreInstitucion");
             return View(p);
         }
         [HttpPost]
@@ -54,9 +62,18 @@ namespace SGC___Vista.Controllers
         {
             if(ModelState.IsValid)
             {
-                db.Entry(proceso).State = EntityState.Modified;
-                db.SaveChanges();
-                return Json(new {success = true, message = "Actualizado!" }, JsonRequestBehavior.AllowGet);
+                if(proceso.idProceso == 0)
+                {
+                    db.Proceso.Add(proceso);
+                    db.SaveChanges();
+                    return Json(new { success = true, message = "Guardado!" }, JsonRequestBehavior.AllowGet);
+                }
+                else
+                {
+                    db.Entry(proceso).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return Json(new { success = true, message = "Actualizado!" }, JsonRequestBehavior.AllowGet);
+                }
             }
             ViewBag.idEstadoGestion = new SelectList(db.EstadoGestion, "idEstadoGestion", "estado");
             ViewBag.idCliente = new SelectList(db.Cliente, "idCliente", "nombreInstitucion");
